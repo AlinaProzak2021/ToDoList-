@@ -1,19 +1,28 @@
-const  App = {
-    data(){
-        return{
+const App = {
+    data() {
+        return {
             toDo: '',
-            toDoList : []
+            toDoList: []
         }
     },
     methods: {
         addToDO(newTodo) {
-            if(newTodo!=='') {
-                this.toDoList.push(newTodo);
-                this.toDo = ''
-            }
+
+            this.toDoList.push(newTodo);
+            this.toDo = ''
+
         },
-        removeItem(itemId){
-            this.toDoList.splice(itemId,1)
+        removeItem(itemId) {
+            this.toDoList.splice(itemId, 1)
+        }
+
+    },
+    computed: {
+        isInputEmpty() {
+            return this.toDo === '';
+        },
+        isEmptyList() {
+            return this.toDoList.length === 0;
         }
 
     }

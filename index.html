@@ -21,20 +21,20 @@
             </div>
             <div class="toDo-list__add-toDo">
                 <input type="text"
-                       v-model="todo"
+                       v-model="toDo"
                        class="toDo-list__input"
                        placeholder="Введите заметку">
-                <div class="toDo-list__button-add" @click="addToDO(todo)"></div>
+                <button class="toDo-list__button-add" :disabled="isInputEmpty" @click="addToDO(toDo)"></button>
             </div>
             <div class="toDo-list__list">
-                <ul v-for="(item,idx) in toDoList">
-                    <li class="toDo-list__list-item" v-if="toDoList!==''">
+                <ul>
+                    <li class="toDo-list__list-item" v-for="(item,idx) in toDoList">
                         <input type="checkbox" class="isСompleted" name="isСompletedTodo">
                         <span> {{item}}</span>
                         <div class="toDo-list__remove-item" @click="removeItem(idx)"></div>
                     </li>
                 </ul>
-                <div class="toDo-list__isEmpty" v-if="toDoList.length==0">У вас пока нет заметок</div>
+                <div class="toDo-list__isEmpty" v-if="isEmptyList">У вас пока нет заметок</div>
             </div>
 
         </form>
