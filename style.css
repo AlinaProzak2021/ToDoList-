@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper__toDo-list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("resources/images/1582033243_anime-aesthetics_vsthemes_ru-20.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+
+}
+.toDo-list__form{
+    background: white;
+    width: 450px;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+}
+.toDO-list__title-form{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.5em;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.toDo-list__add-toDo{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+input{
+    width: 320px;
+    height: 100%;
+    padding-left: 20px;
+    font-size: 1rem;
+    outline-color: #8A2BE2;
+}
+.toDo-list__input{
+    width: 320px;
+    height: 100%;
+    border-radius: 5px;
+    border:1px solid #C4C4C4;
+}
+
+.toDo-list__button-add{
+    height: 100%;
+    width: 50px;
+    background:#8A2BE2;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+}
+.toDo-list__button-add:hover{
+    background: #1E90FF;
+}
+.toDo-list__button-add:after,.toDo-list__button-add:before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    background: white;
+    top: 19px;
+    border-radius: 5px;
+    left: 13px;
+}
+
+.toDo-list__button-add:before{
+    transform: rotate(90deg);
+}
+.toDo-list__list{
+    margin-bottom: 30px;
+
+}
+.toDo-list__isEmpty{
+   font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+.toDo-list__list-item{
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+li>span{
+    width: 300px;
+}
+input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+.isСompleted{
+    width: 30px;
+    height: 30px;
+    border:  none;
+}
+.toDo-list__remove-item{
+    width: 50px;
+    height: 40px;
+    position: relative;
+}
+.toDo-list__remove-item:before, .toDo-list__remove-item:after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #9400D3;
+    top: 19px;
+    border-radius: 5px;
+    left: 13px;
+}
+.toDo-list__remove-item:before{
+    transform: rotate(44deg);
+}
+.toDo-list__remove-item:after{
+    transform: rotate(140deg);
+}
